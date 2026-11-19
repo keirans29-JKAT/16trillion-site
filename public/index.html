@@ -17,6 +17,7 @@ a{color:#d9c093}a:hover{color:#faf4e4}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 input[type=range]{accent-color:#c9a961;width:100%}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield}
 @media (max-width:820px){.navlinks{display:none !important}.hero-h{font-size:52px !important}.sec-h{font-size:36px !important}}
 </style>
 <style>html{scroll-behavior:smooth}*{box-sizing:border-box}</style>
@@ -180,10 +181,10 @@ input[type=range]{accent-color:#c9a961;width:100%}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 32px">
 <div style="flex: 1 1 340px; background: #0e2036; border: 1px solid #1e3651; border-radius: 10px; padding: 36px; display: flex; flex-direction: column; gap: 28px">
-<label style="display: flex; flex-direction: column; gap: 10px"><span style="display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">One-time investment<strong style="color: #faf4e4; letter-spacing: 0; font-size: 16px"><span id="out-lump"></span></strong></span><input type="range" min="0" max="5000000" step="50000" value="500000" id="in-lump"></label>
-<label style="display: flex; flex-direction: column; gap: 10px"><span style="display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Monthly SIP<strong style="color: #faf4e4; letter-spacing: 0; font-size: 16px"><span id="out-sip"></span></strong></span><input type="range" min="0" max="200000" step="1000" value="25000" id="in-sip"></label>
-<label style="display: flex; flex-direction: column; gap: 10px"><span style="display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Horizon<strong style="color: #faf4e4; letter-spacing: 0; font-size: 16px"><span id="out-years"></span> yrs</strong></span><input type="range" min="1" max="30" step="1" value="15" id="in-years"></label>
-<label style="display: flex; flex-direction: column; gap: 10px"><span style="display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Assumed annual return<strong style="color: #faf4e4; letter-spacing: 0; font-size: 16px"><span id="out-rate"></span>%</strong></span><input type="range" min="4" max="14" step="0.5" value="11" id="in-rate"></label>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><label for="num-lump" style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">One-time investment</label><span style="display: flex; align-items: center; gap: 6px; background: #071322; border: 1px solid #1e3651; border-radius: 6px; padding: 6px 10px"><span aria-hidden="true" style="color: #8d98a8">₹</span><input type="number" id="num-lump" min="0" step="any" value="500000" inputmode="decimal" style="width: 120px; background: transparent; border: 0; color: #faf4e4; font: inherit; font-size: 16px; font-weight: 600; text-align: right; outline: none"></span></div><input type="range" min="0" max="5000000" step="50000" value="500000" id="in-lump" aria-label="One-time investment slider"><span id="hint-lump" style="font-size: 13px; color: #8d98a8; text-align: right; min-height: 18px"></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><label for="num-sip" style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Monthly SIP</label><span style="display: flex; align-items: center; gap: 6px; background: #071322; border: 1px solid #1e3651; border-radius: 6px; padding: 6px 10px"><span aria-hidden="true" style="color: #8d98a8">₹</span><input type="number" id="num-sip" min="0" step="any" value="25000" inputmode="decimal" style="width: 120px; background: transparent; border: 0; color: #faf4e4; font: inherit; font-size: 16px; font-weight: 600; text-align: right; outline: none"></span></div><input type="range" min="0" max="200000" step="1000" value="25000" id="in-sip" aria-label="Monthly SIP slider"><span id="hint-sip" style="font-size: 13px; color: #8d98a8; text-align: right; min-height: 18px"></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><label for="num-years" style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Horizon</label><span style="display: flex; align-items: center; gap: 6px; background: #071322; border: 1px solid #1e3651; border-radius: 6px; padding: 6px 10px"><input type="number" id="num-years" min="1" step="1" value="15" inputmode="decimal" style="width: 120px; background: transparent; border: 0; color: #faf4e4; font: inherit; font-size: 16px; font-weight: 600; text-align: right; outline: none"><span aria-hidden="true" style="color: #8d98a8">yrs</span></span></div><input type="range" min="1" max="30" step="1" value="15" id="in-years" aria-label="Horizon slider"><span id="hint-years" style="font-size: 13px; color: #8d98a8; text-align: right; min-height: 18px"></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap"><label for="num-rate" style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">Assumed annual return</label><span style="display: flex; align-items: center; gap: 6px; background: #071322; border: 1px solid #1e3651; border-radius: 6px; padding: 6px 10px"><input type="number" id="num-rate" min="0" step="any" value="11" inputmode="decimal" style="width: 120px; background: transparent; border: 0; color: #faf4e4; font: inherit; font-size: 16px; font-weight: 600; text-align: right; outline: none"><span aria-hidden="true" style="color: #8d98a8">%</span></span></div><input type="range" min="4" max="14" step="0.5" value="11" id="in-rate" aria-label="Assumed annual return slider"><span id="hint-rate" style="font-size: 13px; color: #8d98a8; text-align: right; min-height: 18px"></span></div>
 </div>
 <div style="flex: 999 1 520px; min-width: 0; background: #0e2036; border: 1px solid #1e3651; border-radius: 10px; padding: 36px; display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; flex-wrap: wrap; gap: 48px">
@@ -279,20 +280,35 @@ input[type=range]{accent-color:#c9a961;width:100%}
 </div>
 <script>
 (function(){
-  function inr(v){if(v>=1e7)return '₹'+(v/1e7).toFixed(2)+' Cr';if(v>=1e5)return '₹'+(v/1e5).toFixed(1)+' L';return '₹'+Math.round(v).toLocaleString('en-IN');}
   var $=function(id){return document.getElementById(id);};
+  function inr(v){
+    if(!isFinite(v))return '—';
+    if(v>=1e7)return '₹'+(v/1e7).toLocaleString('en-IN',{maximumFractionDigits:2})+' Cr';
+    if(v>=1e5)return '₹'+(v/1e5).toFixed(1)+' L';
+    return '₹'+Math.round(v).toLocaleString('en-IN');
+  }
+  var keys=['lump','sip','years','rate'],val={};
+  function clean(k,v){v=parseFloat(v);if(!isFinite(v)||v<0)v=0;if(k==='years')v=Math.max(1,Math.round(v));return v;}
+  keys.forEach(function(k){
+    val[k]=clean(k,$('num-'+k).value);
+    $('in-'+k).addEventListener('input',function(){val[k]=clean(k,this.value);$('num-'+k).value=val[k];draw();});
+    $('num-'+k).addEventListener('input',function(){if(this.value==='')return;val[k]=clean(k,this.value);var r=$('in-'+k);r.value=Math.min(Math.max(val[k],+r.min),+r.max);draw();});
+    $('num-'+k).addEventListener('blur',function(){this.value=val[k];});
+  });
   function draw(){
-    var L=+$('in-lump').value,S=+$('in-sip').value,N=+$('in-years').value,R=+$('in-rate').value,i=R/100/12,d=[];
+    var L=val.lump,S=val.sip,N=val.years,R=val.rate,i=R/100/12,d=[];
     for(var y=1;y<=N;y++){var n=y*12,fl=L*Math.pow(1+R/100,y),fs=i>0?S*((Math.pow(1+i,n)-1)/i)*(1+i):S*n;d.push({v:fl+fs,inv:L+S*n});}
     var last=d[d.length-1],max=last.v||1;
-    $('out-lump').textContent=inr(L);$('out-sip').textContent=inr(S);$('out-years').textContent=N;$('out-rate').textContent=R;
+    $('hint-lump').textContent=inr(L);$('hint-sip').textContent=inr(S)+' a month';
+    $('hint-years').textContent='';$('hint-rate').textContent='';
     $('out-invested').textContent=inr(last.inv);$('out-fv').textContent=inr(last.v);
+    var step=Math.ceil(d.length/40),pts=d.filter(function(_,ix){return (ix+1)%step===0||ix===d.length-1;});
     var c=$('sim-chart');c.innerHTML='';
-    d.forEach(function(p){var col=document.createElement('div');col.style.cssText='flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-end;height:100%';
+    pts.forEach(function(p){var col=document.createElement('div');col.style.cssText='flex:1 1 0;display:flex;flex-direction:column;justify-content:flex-end;height:100%';
       var g=document.createElement('div');g.style.cssText='height:'+(Math.max(0,p.v-p.inv)/max*100)+'%;background:#c9a961;border-radius:2px 2px 0 0';
       var b=document.createElement('div');b.style.cssText='height:'+(p.inv/max*100)+'%;background:#3a5373';col.appendChild(g);col.appendChild(b);c.appendChild(col);});
   }
-  ['in-lump','in-sip','in-years','in-rate'].forEach(function(id){$(id).addEventListener('input',draw);});draw();
+  draw();
   $('contact-form').addEventListener('submit',function(e){e.preventDefault();var b=this.querySelector('button');b.textContent='Form not connected yet (preview)';b.disabled=true;});
 })();
 </script>
