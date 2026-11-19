@@ -41,9 +41,9 @@ function page(body, status = 200, headers = {}) {
 *{box-sizing:border-box} body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--navy);color:var(--cream);font-family:"IBM Plex Sans",system-ui,sans-serif;padding:16px}
 .box{width:100%;max-width:360px;display:grid;gap:18px;text-align:center}
 .mark{width:84px;height:84px;margin:0 auto} .mark [stroke]{stroke:#e9c46a} .mark text,.mark g[fill]:not([fill="none"]){fill:#e9c46a}
-.w1{font-family:"Bodoni Moda",Georgia,serif;font-weight:600;font-size:2rem;color:#fff}
+.w1{font-family:"Bodoni Moda","Noto Serif",Georgia,serif;font-weight:600;font-size:2rem;color:#fff}
 .ru{font-family:"Noto Serif",Georgia,serif;font-weight:600;color:#e9c46a}
-.w2{font-family:"Bodoni Moda",Georgia,serif;font-style:italic;font-weight:600;color:#e9c46a;margin-top:-14px}
+.w2{font-family:"Bodoni Moda","Noto Serif",Georgia,serif;font-style:italic;font-weight:600;color:#e9c46a;margin-top:-14px}
 form{display:grid;gap:10px;margin-top:8px;text-align:left}
 label{font-size:.85rem;color:#c9cfd8}
 input{font:inherit;padding:10px 12px;border-radius:6px;border:1px solid rgb(201 169 97/.5);background:rgb(255 255 255/.06);color:var(--cream)}
