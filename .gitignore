@@ -1,2 +1,5 @@
 .DS_Store
 node_modules/
+tools/video/out/
+tools/video/bg.png
+tools/video/__pycache__/

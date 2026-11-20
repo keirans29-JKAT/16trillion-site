@@ -39,6 +39,15 @@ CTA = '''<div style="margin-top: 56px; border-top: 1px solid #1e3651; padding-to
 </div>
 <p style="margin: 24px 0 0; font-size: 13px; line-height: 1.6; color: #8d98a8">This article is general education, not investment, tax or legal advice for your circumstances. Illustrations are not forecasts or assured returns.</p>'''
 
+
+def video_block(a):
+    """A self-hosted explainer video, if public/assets/video/<slug>.mp4 exists (swap for a YouTube embed later)."""
+    if not os.path.exists(os.path.join(ROOT, 'public/assets/video', a['slug'] + '.mp4')): return ''
+    return (f'<figure style="margin: 12px 0 8px"><video controls playsinline preload="none" poster="/assets/video/{a["slug"]}.jpg" '
+            f'style="width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; border: 1px solid #1e3651; background: #071322" '
+            f'aria-label="Animated explainer: {html.escape(a["title"])}"><source src="/assets/video/{a["slug"]}.mp4" type="video/mp4"></video>'
+            f'<figcaption style="margin-top: 8px; font-size: 13px; color: #8d98a8">Animated explainer · no sound</figcaption></figure>')
+
 os.makedirs(os.path.join(ROOT, 'public/learn'), exist_ok=True)
 for i, a in enumerate(ARTICLES):
     others = [b for b in ARTICLES if b is not a][:3]
@@ -52,6 +61,7 @@ for i, a in enumerate(ARTICLES):
 <h1 style="margin: 0; font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 56px; line-height: 1.08; font-weight: 600; color: #faf4e4">{html.escape(a["title"])}</h1>
 <p style="margin: 0; font-size: 21px; line-height: 1.6; color: #c6ccd6">{html.escape(a["dek"])}</p>
 {reviewed}
+{video_block(a)}
 <div class="prose">{a["body"]}</div>
 <aside style="background: #0e2036; border: 1px solid #1e3651; border-left: 3px solid #c9a961; border-radius: 8px; padding: 22px 24px">
 <p style="margin: 0 0 6px; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #d9c093; font-weight: 600">In short</p>
@@ -65,7 +75,7 @@ for i, a in enumerate(ARTICLES):
     d = os.path.join(ROOT, 'public/learn', a['slug']); os.makedirs(d, exist_ok=True)
     open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(page(f'{a["title"]} — 16T₹illion Learn', a['dek'], main))
 
-cards = ''.join(f'''<a class="card" href="/learn/{a["slug"]}/"><span style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">{a["read"]} min read</span><h2 style="margin: 0; font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 28px; line-height: 1.2; font-weight: 600; color: #faf4e4">{html.escape(a["title"])}</h2><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #c6ccd6">{html.escape(a["dek"])}</p><span style="margin-top: auto; color: #d9c093; font-weight: 600; font-size: 15px">Read →</span></a>''' for a in ARTICLES)
+cards = ''.join(f'''<a class="card" href="/learn/{a["slug"]}/"><span style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #8d98a8">{a["read"]} min read{" · video" if os.path.exists(os.path.join(ROOT, "public/assets/video", a["slug"] + ".mp4")) else ""}</span><h2 style="margin: 0; font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 28px; line-height: 1.2; font-weight: 600; color: #faf4e4">{html.escape(a["title"])}</h2><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #c6ccd6">{html.escape(a["dek"])}</p><span style="margin-top: auto; color: #d9c093; font-weight: 600; font-size: 15px">Read →</span></a>''' for a in ARTICLES)
 main = f'''<main>
 <section style="padding: 96px 32px 40px; background: radial-gradient(1200px 500px at 80% 0%, #0e2036 0%, #071322 70%)">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
