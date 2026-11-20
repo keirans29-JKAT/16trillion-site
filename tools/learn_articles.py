@@ -194,4 +194,36 @@ ARTICLES = [
 """,
 "short": "Gold's role is balance, not growth: it has tended to hold up when shares or the rupee fall. Silver swings more. Keep both to a modest share.",
 },
+{
+"slug": "read-your-cas",
+"title": "How to read your CAS statement",
+"dek": "Your Consolidated Account Statement shows every mutual fund you own, in one document. Here is how to get it, and the six things worth checking on it.",
+"read": 5,
+"body": """
+<h2>What a CAS is</h2>
+<p>A <b>Consolidated Account Statement (CAS)</b> brings together all your mutual fund investments linked to your PAN, across every fund house, in a single statement. Instead of separate statements from each fund house, you see everything in one place.</p>
+<p>There are two versions, depending on how you hold your investments:</p>
+<ul>
+<li><b>Depository CAS</b>, from NSDL or CDSL, if you have a demat account. It shows shares, bonds and ETFs in your demat accounts, and your mutual fund holdings too.</li>
+<li><b>Mutual fund CAS</b>, from the registrars CAMS and KFintech, if you hold mutual funds outside a demat account.</li>
+</ul>
+<h2>How to get it</h2>
+<ul>
+<li>Request a mutual fund CAS on the CAMS or KFintech website using the joint CAMS–KFintech service, so it covers funds serviced by both registrars. You can also download it from MFCentral.</li>
+<li>You'll need your PAN and the email address registered with your funds. The statement arrives as a password-protected PDF; the email explains the password.</li>
+<li>Choose the <b>detailed</b> version, with transactions, and a period covering as far back as you can. A summary shows only current values.</li>
+</ul>
+<h2>Six things to check</h2>
+<p><b>1. Every holding is one you recognise.</b> Look through the list of schemes and folios. Old investments people have forgotten about turn up surprisingly often.</p>
+<p><b>2. Direct or Regular.</b> The scheme name says which plan you hold. If you see "Regular" on funds you didn't knowingly buy through a distributor, you're paying commission every year. <a href="/learn/direct-vs-regular-plans/">Why that matters</a>.</p>
+<p><b>3. What you paid versus what it's worth.</b> The statement shows the cost of your investments and their current value. Compare the two for each fund, not just the total.</p>
+<p><b>4. Costs and commission.</b> The half-yearly statement discloses each scheme's expense ratio and, for Regular plans, the commission paid to your distributor in rupees. Many investors are surprised by that figure.</p>
+<p><b>5. Nominees.</b> The statement shows whether each folio has a nominee. A missing nominee makes life much harder for your family later.</p>
+<p><b>6. Too many funds doing the same job.</b> Five large-cap funds don't make a portfolio five times safer; they often own many of the same shares. Group your funds by category and see where they overlap. <a href="/learn/asset-allocation/">How asset allocation works</a>.</p>
+<h2>Bring it to your first conversation</h2>
+<p>A CAS is the quickest way for an adviser to understand where you stand today. Bring a recent detailed CAS to your discovery call, and we'll go through it together.</p>
+<p>Your CAS contains your PAN and full holdings, so share it only with people you trust and never in a public forum.</p>
+""",
+"short": "Download a detailed CAS from CAMS–KFintech, MFCentral or your depository. Check for forgotten holdings, Regular plans, costs and commission, missing nominees and overlapping funds.",
+},
 ]
