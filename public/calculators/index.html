@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Calculators — 16T₹illion Wealth Advisory</title>
+<meta name="description" content="Free financial calculators from 16 Trillion Wealth Advisory: SIP, lumpsum, goal planner, retirement corpus, SWP and STP. Illustrations, not recommendations.">
+<link rel="icon" href="/assets/16trillion-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500..800;1,6..96,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400..700;1,400..700&amp;text=%E2%82%B9&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#071322;color:#f3eddf;font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:#d9c093}a:hover{color:#faf4e4}
+.navlinks a{color:#f3eddf;text-decoration:none;font-size:15px}
+.navlinks a:hover{color:#d9c093}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+input[type=range]{accent-color:#c9a961;width:100%}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield}
+@media (max-width:820px){.navlinks{display:none !important}.hero-h{font-size:52px !important}.sec-h{font-size:36px !important}}
+</style>
+<style>html{scroll-behavior:smooth}*{box-sizing:border-box}</style>
+<style>
+:root{--s1:#c9a961;--s2:#5b93e6;--muted:#8d98a8;--grid:#16304c;--axis:#1e3651;--surface:#0e2036;--bg:#071322;--line:#1e3651;--ink:#f3eddf;--ink-2:#c6ccd6;--accent:#c9a961;--accent-soft:#132943;--gold-2:#d9c093;--bad:#ef7a72;--good:#59c08a;--r-sm:6px}
+.cnav{display:flex;flex-wrap:wrap;gap:10px}
+.cnav button{font:inherit;font-size:15px;color:#c6ccd6;background:transparent;border:1px solid #1e3651;border-radius:999px;padding:12px 20px;cursor:pointer;min-height:44px}
+.cnav button:hover{border-color:#c9a961;color:#faf4e4}
+.cnav button[aria-selected="true"]{background:#c9a961;border-color:#c9a961;color:#0c1e34;font-weight:600}
+#cpane{background:#0e2036;border:1px solid #1e3651;border-radius:10px;padding:32px}
+#cpane h2{font-family:'Bodoni Moda','Noto Serif',Georgia,serif;font-weight:600;font-size:34px;color:#faf4e4;margin:0 0 24px}
+#cpane h3{font-size:16px;font-weight:600;color:#faf4e4}
+.cbody{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px;align-items:start}
+.form{display:grid;gap:14px;min-width:0}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;color:#c6ccd6}
+.field input,.field select{width:100%;font:inherit;font-size:16px;color:#faf4e4;padding:11px 12px;border:1px solid #1e3651;border-radius:6px;background:#071322}
+.field input:focus,.field select:focus{outline:2px solid #c9a961;outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.tile{background:#071322;border:1px solid #1e3651;border-radius:8px;padding:16px;display:grid;gap:6px}
+.tile .lbl{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8d98a8}
+.tile.key .lbl{color:#d9c093}
+.tile b{font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:600;font-size:24px;line-height:1.15;letter-spacing:-.01em;font-variant-numeric:lining-nums tabular-nums;color:#faf4e4}
+.tile.key b{color:#d9c093}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#c6ccd6}
+.sw{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
+.chart{position:relative;min-height:260px}
+.chart svg text{font-family:'IBM Plex Sans',system-ui,sans-serif}
+.tip{position:absolute;pointer-events:none;background:#071322;border:1px solid #1e3651;border-radius:6px;box-shadow:0 4px 14px rgb(0 0 0/.35);padding:8px 10px;font-size:13px;color:#f3eddf;white-space:nowrap;z-index:2}
+.tip .d{color:#8d98a8;margin-bottom:2px}
+.note{font-size:13px;color:#8d98a8;line-height:1.55;margin:0}
+.small{font-size:13px}.muted{color:#8d98a8}
+.banner{background:#071322;border:1px solid #1e3651;border-radius:8px;padding:18px 20px;font-size:15px;line-height:1.6;display:grid;gap:10px;color:#c6ccd6}
+.banner b{color:#faf4e4}
+.msg{font-size:14px;padding:10px 12px;border-radius:6px;background:#132943}.msg.err{color:#ef7a72}
+.empty{color:#8d98a8;padding:24px;text-align:center}
+.tbl{overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #1e3651;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:#8d98a8;font-weight:500}
+@media (max-width:1000px){.cbody{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){#cpane{padding:20px}#cpane h2{font-size:28px}}
+</style>
+</head>
+<body>
+<header style="background: #071322; border-bottom: 1px solid #1e3651">
+<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="/" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
+<svg role="img" aria-label="16Trillion Wealth Advisory" viewBox="-100 -100 200 200" style="width: 54px; height: 54px"><g fill="none" stroke="#c9a961"><circle r="95" stroke-width="3"></circle><line x1="-95" x2="95" stroke-width="2"></line><line y1="-95" y2="95" stroke-width="2"></line><path d="M0,-95A42,95 0 0 1 0,95M0,-95A42,95 0 0 0 0,95M-95,0A95,38 0 0 0 95,0M-95,0A95,38 0 0 1 95,0" stroke-width="1.8"></path></g><text x="0" y="22" font-family="Bodoni Moda,Georgia,serif" font-size="66" font-weight="800" fill="#c9a961" text-anchor="middle">16</text><g fill="#c9a961"><path d="M36,-70l1.4,3.6 3.6,1.4-3.6,1.4-1.4,3.6-1.4-3.6-3.6-1.4 3.6-1.4Z"></path><path d="M58,-54l2.4,6.2 6.2,2.4-6.2,2.4-2.4,6.2-2.4-6.2-6.2-2.4 6.2-2.4Z"></path><path d="M74,-40l1.6,4.2 4.2,1.6-4.2,1.6-1.6,4.2-1.6-4.2-4.2-1.6 4.2-1.6Z"></path><path d="M50,-64l.9,2.3 2.3,.9-2.3,.9-.9,2.3-.9-2.3-2.3-.9 2.3-.9Z"></path><path d="M68,-22l1.1,2.9 2.9,1.1-2.9,1.1-1.1,2.9-1.1-2.9-2.9-1.1 2.9-1.1Z"></path></g></svg>
+<span style="font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 26px; font-weight: 600; color: #faf4e4">16T₹illion</span>
+</a>
+<div class="navlinks" style="display: flex; align-items: center; gap: 32px">
+<a href="/#practice">The practice</a>
+<a href="/#fees">How we're paid</a>
+<a href="/calculators/" aria-current="page" style="color: #d9c093">Calculators</a>
+<a href="/#onboarding">Onboarding</a>
+<a href="/#faq">FAQ</a>
+<a href="/#contact" style="background: #c9a961; color: #0c1e34; padding: 12px 20px; border-radius: 6px; font-weight: 600">Free discovery call</a>
+</div>
+</nav>
+</header>
+<main>
+<section style="padding: 96px 32px 40px; background: radial-gradient(1200px 500px at 80% 0%, #0e2036 0%, #071322 70%)">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; color: #c9a961; font-size: 14px; letter-spacing: 0.32em; text-transform: uppercase; font-weight: 600">Calculators</p>
+<h1 style="margin: 0; font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 64px; line-height: 1.05; font-weight: 600; color: #faf4e4">Put numbers to your plans.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #c6ccd6; max-width: 760px">Six calculators for the questions we hear most. Each one shows its working in plain language, so you can see how the answer is reached, not just the answer.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #8d98a8; max-width: 760px; border-left: 2px solid #c9a961; padding-left: 14px">These are illustrations based on the assumptions you enter. They are not recommendations, forecasts or assured returns, and they do not account for tax unless stated. Markets do not move in straight lines.</p>
+</div>
+</section>
+<section style="padding: 24px 32px 112px">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px">
+<div class="cnav" id="cnav" role="tablist" aria-label="Calculators"></div>
+<div id="cpane" role="tabpanel"></div>
+<p style="margin: 0; font-size: 15px; color: #c6ccd6">Want help turning these numbers into a plan? <a href="/#contact">Book a free discovery call</a>.</p>
+</div>
+</section>
+</main>
+<footer style="background: #050d18; color: #8d98a8; padding: 56px 32px 40px; font-size: 13px; line-height: 1.7">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px">
+<span style="font-family: 'Bodoni Moda', 'Noto Serif', Georgia, serif; font-size: 22px; color: #faf4e4">16T₹illion <span style="font-style: italic; color: #c9a961; font-size: 16px">Wealth Advisory</span></span>
+<span>Privacy policy · Terms · Disclosures · Grievance redressal</span>
+</div>
+<p style="margin: 0">16 Trillion Wealth Advisory LLP · LLPIN ADC-7780 · GSTIN 29AAEFZ6331R1ZA · Registered office: #005, Shri Balaji Classic, 121/2, 9th Street, Bank Avenue, Babusapalya, Bengaluru 560043</p>
+<p style="margin: 0">SEBI Registered Investment Adviser · Registration No. [SEBI RIA REG. NO.] · Type: [NON-INDIVIDUAL] · Validity: [PERPETUAL / DATES] · BASL Membership No. [BASL NO.]</p>
+<p style="margin: 0">Principal Officer: [NAME] · [EMAIL] · [PHONE] · Compliance Officer: [NAME] · [EMAIL] · Grievance Officer: [NAME] · [EMAIL]</p>
+<p style="margin: 0">SEBI regional office: [SEBI LOCAL OFFICE ADDRESS] · Lodge a complaint on SCORES: scores.sebi.gov.in · Online dispute resolution: smartodr.in</p>
+<p style="margin: 0">Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. Investments in securities markets are subject to market risks. Read all related documents carefully before investing. [CONFIRM FINAL DISCLAIMER WORDING WITH COMPLIANCE]</p>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="/assets/fw.js"></script>
+<script>
+(function(){
+'use strict';
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const pct = (v, d = 1) => v == null || !isFinite(v) ? '—' : (v * 100).toFixed(d) + '%';
+const inr = new Intl.NumberFormat('en-IN', {maximumFractionDigits: 0});
+function rupees(v){ if (v == null || !isFinite(v)) return '—'; const a = Math.abs(v), s = v < 0 ? '−' : '';
+  if (a >= 1e7) return `${s}₹${(a/1e7).toFixed(2)} Cr`; if (a >= 1e5) return `${s}₹${(a/1e5).toFixed(2)} L`; return `${s}₹${inr.format(a)}`; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dfmt = t => new Date(t).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric', timeZone:'UTC'});
+const store = { get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} } };
+
+const CALCS = [{id: 'sip', name: 'SIP'}, {id: 'lump', name: 'Lumpsum'}, {id: 'goal', name: 'Goal planner'}, {id: 'ret', name: 'Retirement'}, {id: 'swp', name: 'SWP'}, {id: 'stp', name: 'STP'}];
+const fromHash = location.hash.slice(1);
+let calcId = CALCS.some(c => c.id === fromHash) ? fromHash : (store.get('site.calc') || 'sip');
+if (!CALCS.some(c => c.id === calcId)) calcId = 'sip';
+const F = (id, label, val, step = 'any', suffix = '') => `<div class="field"><label for="${id}">${label}${suffix ? ` <span class="muted">(${suffix})</span>` : ''}</label><input id="${id}" type="number" inputmode="decimal" step="${step}" value="${store.get('site.c.' + id) ?? val}"></div>`;
+const V = id => +document.getElementById(id).value || 0;
+const tile = (label, val, key) => `<div class="tile${key ? ' key' : ''}"><span class="lbl">${label}</span><b>${val}</b></div>`;
+const mrateC = r => Math.pow(1 + r, 1 / 12) - 1;
+const xP = (x, d = 1) => (x * 100).toFixed(d) + '%';
+const HOW = '<b>How these numbers are worked out</b>';
+
+function lineChart(el, series, o = {}){
+  el.innerHTML = '';
+  const legend = el.parentElement.querySelector('[data-legend]');
+  if (legend) legend.innerHTML = series.length > 1 ? series.map(s => `<span><i class="sw" style="background:${s.color}"></i>${esc(s.name)}</span>`).join('') : '';
+  const all = series.flatMap(s => s.points); if (all.length < 2) { el.innerHTML = '<div class="empty">Not enough history for this view.</div>'; return; }
+  const W = Math.max(300, el.clientWidth), H = o.h || 260, mt = 10, mb = 26, mr = 14;
+  const vals = all.map(p => p.v); let lo = d3.min(vals), hi = d3.max(vals);
+  if (o.zero) { lo = Math.min(lo, 0); hi = Math.max(hi, 0); }
+  const y = d3.scaleLinear([lo, hi], [H - mb, mt]).nice(5);
+  const yf = o.yFmt || (v => v);
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', o.label || 'chart');
+  const probe = svg.append('g'); const ticks = y.ticks(5);
+  probe.selectAll('text').data(ticks).join('text').style('font-size', '11px').text(yf);
+  const ml = Math.ceil(d3.max(probe.selectAll('text').nodes(), n => n.getComputedTextLength()) || 20) + 10; probe.remove();
+  const xd = d3.extent(all, p => p.t), x = (o.xBand ? d3.scaleLinear(xd, [ml, W - mr]) : d3.scaleUtc(xd.map(t => new Date(t)), [ml, W - mr]));
+  const X = t => o.xBand ? x(t) : x(new Date(t));
+  const g = svg.append('g');
+  g.selectAll('line.gr').data(ticks).join('line').attr('x1', ml).attr('x2', W - mr).attr('y1', d => y(d)).attr('y2', d => y(d)).attr('stroke', css('--grid')).attr('stroke-width', 1);
+  g.selectAll('text.yt').data(ticks).join('text').attr('x', ml - 8).attr('y', d => y(d)).attr('dy', '.32em').attr('text-anchor', 'end').attr('fill', css('--muted')).style('font-size', '11px').text(yf);
+  if (o.zero || lo < 0) g.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y(0)).attr('y2', y(0)).attr('stroke', css('--axis'));
+  if (o.ref != null) g.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', y(o.ref)).attr('y2', y(o.ref)).attr('stroke', css('--muted')).attr('stroke-dasharray', '4 3');
+  const xt = o.xBand ? x.ticks(Math.min(8, Math.floor(W / 70))).filter(Number.isInteger) : x.ticks(Math.min(7, Math.floor(W / 80)));
+  g.selectAll('text.xt').data(xt).join('text').attr('x', d => x(d)).attr('y', H - 8).attr('text-anchor', d => x(d) > W - mr - 28 ? 'end' : x(d) < ml + 20 ? 'start' : 'middle').attr('fill', css('--muted')).style('font-size', '11px')
+    .text(d => o.xBand ? (o.xFmt ? o.xFmt(d) : d) : d3.utcFormat(xd[1] - xd[0] > 3 * 365 * 864e5 ? '%Y' : '%b %y')(d));
+  g.append('line').attr('x1', ml).attr('x2', W - mr).attr('y1', H - mb).attr('y2', H - mb).attr('stroke', css('--axis'));
+  // dated markers (e.g. a new fund manager joining): dashed vertical lines in the series colour
+  if (o.marks && !o.xBand) for (const mk of o.marks) { if (mk.t < xd[0] || mk.t > xd[1]) continue; const xx = X(mk.t);
+    g.append('line').attr('x1', xx).attr('x2', xx).attr('y1', mt).attr('y2', H - mb).attr('stroke', mk.color).attr('stroke-width', 1.25).attr('stroke-dasharray', '3 3').attr('opacity', .75); }
+  series.forEach(s => {
+    const line = d3.line().x(p => X(p.t)).y(p => y(p.v));
+    if (o.area && series.length === 1) svg.append('path').datum(s.points).attr('d', d3.area().x(p => X(p.t)).y0(y(Math.max(lo, 0))).y1(p => y(p.v))).attr('fill', s.color).attr('opacity', .12);
+    svg.append('path').datum(s.points).attr('d', line).attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', 2).attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round');
+  });
+  const rule = svg.append('line').attr('y1', mt).attr('y2', H - mb).attr('stroke', css('--axis')).attr('opacity', 0);
+  const dots = series.map(s => svg.append('circle').attr('r', 4).attr('fill', s.color).attr('stroke', css('--surface')).attr('stroke-width', 2).attr('opacity', 0));
+  let tip = el.querySelector('.tip'); if (!tip) { tip = document.createElement('div'); tip.className = 'tip'; tip.hidden = true; el.appendChild(tip); }
+  const bis = d3.bisector(p => p.t).center;
+  svg.append('rect').attr('x', ml).attr('y', 0).attr('width', W - mr - ml).attr('height', H - mb).attr('fill', 'transparent')
+    .on('pointermove', ev => {
+      const sc = W / el.clientWidth, [px] = d3.pointer(ev), t = o.xBand ? x.invert(px) : +x.invert(px);
+      const ref = series.reduce((a, s) => s.points.length > a.points.length ? s : a, series[0]); const p0 = ref.points[bis(ref.points, t)];
+      rule.attr('x1', X(p0.t)).attr('x2', X(p0.t)).attr('opacity', 1);
+      const rows = series.map((s, k) => { const p = s.points[bis(s.points, p0.t)]; const ok = p && Math.abs(p.t - p0.t) <= (o.xBand ? .5 : 6 * 864e5);
+        dots[k].attr('opacity', ok ? 1 : 0); if (ok) dots[k].attr('cx', X(p.t)).attr('cy', y(p.v));
+        return ok ? `<div>${series.length > 1 ? `<i class="sw" style="background:${s.color}"></i>` : ''}${esc(s.name)} <b>${(o.tipFmt || yf)(p.v)}</b></div>` : ''; }).join('');
+      tip.innerHTML = `<div class="d">${o.xBand ? esc(o.xFmt ? o.xFmt(p0.t) : p0.t) : dfmt(p0.t)}</div>${rows}`; tip.hidden = false;
+      const left = X(p0.t) / sc; tip.style.left = Math.max(0, Math.min(el.clientWidth - tip.offsetWidth, left + 14)) + 'px'; tip.style.top = '4px';
+    })
+    .on('pointerleave', () => { tip.hidden = true; rule.attr('opacity', 0); dots.forEach(d => d.attr('opacity', 0)); });
+}
+
+function renderCalc(){
+  $('#cnav').innerHTML = CALCS.map(c => `<button role="tab" data-c="${c.id}" aria-selected="${c.id === calcId}">${c.name}</button>`).join('');
+  $$('#cnav button').forEach(b => b.onclick = () => { calcId = b.dataset.c; store.set('site.calc', calcId); history.replaceState(null, '', '#' + calcId); renderCalc(); });
+  const P = $('#cpane');
+  const forms = {
+    sip: `<h2>SIP calculator</h2><div class="cbody"><div class="form">${F('sip_m', 'Monthly SIP', 25000, 500, '₹')}${F('sip_r', 'Expected return', 12, 0.1, '% a year')}${F('sip_y', 'Years', 15, 1)}${F('sip_s', 'Annual step-up', 10, 1, '%')}${F('sip_l', 'Lumpsum at start', 0, 1000, '₹')}<p class="note">SIP invested at the start of each month. The monthly rate is the exact equivalent of the annual return, so a 12% return means 12% CAGR.</p></div><div class="form"><div class="tiles" id="out"></div><div class="legend" data-legend></div><div class="chart" id="cchart"></div></div></div>`,
+    lump: `<h2>Lumpsum calculator</h2><div class="cbody"><div class="form">${F('lp_a', 'Amount invested', 1000000, 10000, '₹')}${F('lp_r', 'Expected return', 11, 0.1, '% a year')}${F('lp_y', 'Years', 10, 1)}${F('lp_i', 'Inflation', 6, 0.1, '% a year')}</div><div class="form"><div class="tiles" id="out"></div><div class="legend" data-legend></div><div class="chart" id="cchart"></div><div class="banner" id="lpx" style="margin-top:6px"></div></div></div>`,
+    goal: `<h2>Goal planner</h2><div class="cbody"><div class="form">${F('gp_t', 'Target amount', 150000000, 100000, '₹')}<div class="field"><label for="gp_m">This target is</label><select id="gp_m"><option value="future">the amount wanted at the end</option><option value="today">in today's money (inflation is added)</option></select></div>${F('gp_y', 'Years to reach it', 15, 1)}${F('gp_r', 'Expected return', 12, 0.1, '% a year')}${F('gp_i', 'Inflation', 6, 0.1, '% a year')}${F('gp_s', 'SIP step-up each year', 10, 1, '%')}<details><summary class="small">Already saved for this goal (optional)</summary><div style="margin-top:10px">${F('gp_e', 'Amount saved so far', 0, 10000, '₹')}</div></details><p class="note">Plan on a return you would accept in a bad decade, not the best recent one. Diversified equity has historically returned about 11–13% a year.</p></div><div class="form"><div class="tiles" id="out"></div><p class="note" id="gnote"></p></div></div>`,
+    ret: `<h2>Retirement corpus</h2><div class="cbody"><div class="form">${F('r_e', 'Monthly expenses today', 100000, 1000, '₹')}<div class="row2">${F('r_a', 'Current age', 40, 1)}${F('r_ra', 'Retirement age', 60, 1)}</div>${F('r_l', 'Plan until age', 85, 1)}${F('r_i', 'Inflation', 6, 0.1, '% a year')}<div class="row2">${F('r_pr', 'Return before', 11, 0.1, '%')}${F('r_po', 'Return after', 7, 0.1, '%')}</div>${F('r_x', 'Retirement savings so far', 2000000, 10000, '₹')}${F('r_s', 'Annual SIP step-up', 0, 1, '%')}</div><div class="form"><div class="tiles" id="out"></div><div class="legend" data-legend></div><div class="chart" id="cchart"></div><p class="note">The corpus is the amount that funds inflation-rising monthly expenses until the planning age and runs to zero then. Expenses step up once a year.</p></div></div>`,
+    swp: `<h2>SWP calculator</h2><div class="cbody"><div class="form">${F('w_c', 'Starting corpus', 10000000, 100000, '₹')}${F('w_w', 'Monthly withdrawal', 60000, 1000, '₹')}${F('w_g', 'Annual increase in withdrawal', 5, 0.5, '%')}${F('w_r', 'Expected return', 8, 0.1, '% a year')}${F('w_y', 'Years', 30, 1)}<p class="note">Withdrawal at the start of each month. Tax on redemptions is not deducted.</p></div><div class="form"><div class="tiles" id="out"></div><div class="legend" data-legend></div><div class="chart" id="cchart"></div></div></div>`,
+    stp: `<h2>STP calculator</h2><div class="cbody"><div class="form">${F('st_a', 'Amount parked in the liquid fund', 1000000, 10000, '₹')}<div class="field"><label for="st_m">Type of STP</label><select id="st_m"><option value="fixed">Fixed amount each month</option><option value="profit">Transfer only the profit (capital stays in liquid)</option><option value="inc">Fixed amount, rising each year</option></select></div><div id="st_amt_box">${F('st_t', 'Monthly transfer to equity', 100000, 5000, '₹')}</div>${F('st_g', 'Yearly increase in the transfer', 10, 1, '%, for the rising option')}<div class="row2">${F('st_rl', 'Liquid fund return', 6.5, 0.1, '% a year')}${F('st_re', 'Equity fund return', 12, 0.1, '% a year')}</div>${F('st_y', 'Look at the value after', 10, 1, 'years')}<p class="note">Enter the monthly transfer you want; the schedule shows each month's transfer and how long the liquid fund lasts. The last transfer is whatever is left, and the liquid fund keeps earning while it waits. An STP moves money from a liquid fund into an equity fund in monthly steps, so the equity is bought over several months instead of in one go. Returns here are steady assumed rates; in a real market the benefit of spreading the purchase depends on whether prices fall or rise while it runs. Each transfer is a redemption from the liquid fund, so tax on its gains applies.</p></div><div class="form"><div class="tiles" id="out"></div><div class="legend" data-legend></div><div class="chart" id="cchart"></div><h3 style="margin-top:10px">Transfer schedule</h3><div class="tbl" style="max-height:340px;overflow:auto"><table id="stt"></table></div></div></div>`,
+  };
+  P.innerHTML = forms[calcId];
+  if (['sip', 'goal', 'ret', 'swp', 'stp'].includes(calcId)) { const fx = P.querySelectorAll('.cbody > .form'); fx[fx.length - 1].insertAdjacentHTML('beforeend', '<div class="banner" id="cx" style="margin-top:6px"></div>'); }
+  P.querySelectorAll('input').forEach(i => i.addEventListener('input', () => { if (i.id) store.set('site.c.' + i.id, i.value); compute(); }));
+  P.querySelectorAll('select').forEach(sel => { const v = store.get('site.c.' + sel.id); if (v) sel.value = v; sel.addEventListener('change', () => { store.set('site.c.' + sel.id, sel.value); compute(); }); });
+  compute();
+}
+function compute(){ try { computeInner(); } catch (e) { console.error(e); } }
+function computeInner(){
+  const out = $('#out'), ch = $('#cchart');
+  if (calcId === 'sip') {
+    const r = FW.sip({monthly: V('sip_m'), rate: V('sip_r') / 100, years: Math.max(1, Math.round(V('sip_y'))), stepUp: V('sip_s') / 100, lumpsum: V('sip_l')});
+    out.innerHTML = tile('Value at the end', rupees(r.value), true) + tile('Total invested', rupees(r.invested)) + tile('Gain', rupees(r.gain)) + tile('Final monthly SIP', rupees(r.rows[r.rows.length - 1].sipAmount));
+    { const m = V('sip_m'), rt = V('sip_r') / 100, Y = Math.max(1, Math.round(V('sip_y'))), st = V('sip_s') / 100, L = V('sip_l'), i = mrateC(rt), R = rupees;
+      const first = m * Math.pow(1 + i, Y * 12), last = m * Math.pow(1 + st, Y - 1) * (1 + i), mid = r.rows[Math.max(0, Math.floor(Y / 2) - 1)];
+      $('#cx').innerHTML = `${HOW}
+      <span><b>1. Each instalment grows for a different length of time.</b> ${R(m)} is invested at the start of every month. The first instalment stays invested for all ${Y} years and grows to about ${R(first)}; the last one is invested for just a month${st > 0 ? ` (and by then it is ${R(last / (1 + i))}, after ${xP(st, 0)} yearly step-ups)` : ''}. ${xP(rt)} a year works out to ${xP(i, 2)} a month, compounded.</span>
+      <span><b>2. Value at the end.</b> Adding up what every instalment has grown to${L > 0 ? `, plus the ${R(L)} lumpsum grown for ${Y} years,` : ''} gives <b>${R(r.value)}</b>. You put in ${R(r.invested)}, so the gain is <b>${R(r.gain)}</b>, before tax.</span>
+      <span><b>3. Most of the gain comes late.</b> ${Y >= 2 ? `After ${mid.year} years the plan is worth ${R(mid.value)} on ${R(mid.invested)} invested, a gain of ${R(mid.value - mid.invested)}. The remaining years add ${R(r.gain - (mid.value - mid.invested))} more, because by then a large sum is compounding.` : 'Over longer periods, the later years add the most, because a large sum is compounding by then.'}</span>
+      <span><b>4. Why the gain looks smaller than a lumpsum's.</b> On average each rupee in a SIP is invested for only about half the period, so ${R(r.invested)} put in gradually earns less than the same amount invested on day one. The annual return on the money actually invested is still ${xP(rt)}.</span>
+      <span><b>What it means for an investor.</b> ${xP(rt)} is an assumption; real returns go up and down. A SIP's strength is discipline: the same amount every month buys more units when prices are low and fewer when they are high, and missing instalments or stopping in a fall costs the most. ${st > 0 ? `Raising the SIP ${xP(st, 0)} a year, in line with income, is what lifts the final value to ${R(r.value)}.` : 'Raising the SIP each year as income grows (the step-up field) makes a large difference over long periods.'} Tax on redemption is not deducted.</span>`; }
+    lineChart(ch, [{name: 'Value', color: css('--s1'), points: [{t: 0, v: V('sip_l')}, ...r.rows.map(x => ({t: x.year, v: x.value}))]}, {name: 'Invested', color: css('--muted'), points: [{t: 0, v: V('sip_l')}, ...r.rows.map(x => ({t: x.year, v: x.invested}))]}],
+      {xBand: true, xFmt: d => 'Year ' + d, yFmt: v => rupees(v).replace('.00', ''), tipFmt: rupees});
+  } else if (calcId === 'lump') {
+    const a = V('lp_a'), r = V('lp_r') / 100, y = Math.max(1, Math.round(V('lp_y'))), inf = V('lp_i') / 100, fv = a * Math.pow(1 + r, y);
+    out.innerHTML = tile('Value at the end', rupees(fv), true) + tile('Gain', rupees(fv - a)) + tile('In today\'s money', rupees(fv / Math.pow(1 + inf, y))) + tile('Real return', pct((1 + r) / (1 + inf) - 1));
+    const pts = d3.range(0, y + 1).map(k => ({t: k, v: a * Math.pow(1 + r, k)})), real = d3.range(0, y + 1).map(k => ({t: k, v: a * Math.pow((1 + r) / (1 + inf), k)}));
+    lineChart(ch, [{name: 'Value', color: css('--s1'), points: pts}, {name: 'In today\'s money', color: css('--s2'), points: real}], {xBand: true, xFmt: d => 'Year ' + d, yFmt: v => rupees(v).replace('.00', ''), tipFmt: rupees});
+    // plain-language explanation built from the numbers on screen
+    const R = n => rupees(n), P = (x, d = 1) => (x * 100).toFixed(d) + '%', y1 = a * (1 + r), today = fv / Math.pow(1 + inf, y), rr = (1 + r) / (1 + inf) - 1;
+    const dbl = r > 0 ? Math.log(2) / Math.log(1 + r) : null, half = y >= 2 ? a * Math.pow(1 + r, Math.floor(y / 2)) : null;
+    $('#lpx').innerHTML = `<b>How these numbers are worked out</b>
+      <span><b>1. Growth each year.</b> The ${R(a)} grows by ${P(r)} in the first year, to ${R(y1)}. In the second year the ${P(r)} is earned on ${R(y1)}, not just on the original amount. Earning returns on past returns is compounding, and it repeats every year: ${R(a)} × (1 + ${P(r)})<sup>${y}</sup> = <b>${R(fv)}</b>.</span>
+      <span><b>2. Why the line curves upward.</b> ${half ? `After ${Math.floor(y / 2)} years the investment is worth ${R(half)}, a gain of ${R(half - a)}; the remaining ${y - Math.floor(y / 2)} years add ${R(fv - half)}. ` : ''}${dbl ? `At ${P(r)} a year, money roughly doubles every ${dbl.toFixed(1)} years. ` : ''}The longer the money stays invested, the faster it grows.</span>
+      <span><b>3. Gain.</b> ${R(fv)} − ${R(a)} invested = <b>${R(fv - a)}</b>, before tax.</span>
+      <span><b>4. What it is worth in today's money.</b> Prices also rise, here by ${P(inf)} a year. Dividing ${R(fv)} by (1 + ${P(inf)})<sup>${y}</sup> gives <b>${R(today)}</b>: what ${R(fv)} in ${y} years will buy at today's prices. ${today >= a ? `So the investment's buying power grows by ${R(today - a)}, not ${R(fv - a)}.` : `That is less than the ${R(a)} invested: at these rates the money loses buying power.`}</span>
+      <span><b>5. Real return.</b> (1 + ${P(r)}) ÷ (1 + ${P(inf)}) − 1 = <b>${P(rr, 2)}</b> a year. This is how fast buying power grows, and the figure to compare across investments.</span>
+      <span><b>Why the formula divides.</b> Say ₹100 buys one basket of things today. After a year the investment is worth ₹${(100 * (1 + r)).toFixed(2).replace(/\.00$/, '')}, but the basket now costs ₹${(100 * (1 + inf)).toFixed(2).replace(/\.00$/, '')}. ₹${(100 * (1 + r)).toFixed(2).replace(/\.00$/, '')} ÷ ₹${(100 * (1 + inf)).toFixed(2).replace(/\.00$/, '')} = ${((1 + r) / (1 + inf)).toFixed(4)} baskets: ${P(rr, 2)} more than a year ago. Simply subtracting, ${P(r)} − ${P(inf)} = ${P(r - inf)}, slightly overstates it, because inflation also shrinks what the gains can buy. Over ${y} years the shortcut would show ${R(a * Math.pow(1 + r - inf, y))} in today's money instead of ${R(today)}${Math.abs(a * Math.pow(1 + r - inf, y) - today) >= 1 ? `, ${R(Math.abs(a * Math.pow(1 + r - inf, y) - today))} ${a * Math.pow(1 + r - inf, y) > today ? 'too much' : 'too little'}` : ''}. Growing ${R(a)} at the real return for ${y} years gives the same ${R(today)} as the "in today's money" figure.</span>
+      <span><b>What it means for an investor.</b> The ${P(r)} is an assumption: equity funds do not return the same every year, and a single year can be −30% or +50%, though over long periods the ups and downs tend to even out. Use this as a rough guide to what a sum could become, and look at the "in today's money" figure, not the headline value, when judging whether it meets a goal. Tax on gains is not deducted.</span>`;
+  } else if (calcId === 'goal') {
+    const future = $('#gp_m').value === 'future', y = Math.max(1, Math.round(V('gp_y'))), inf = V('gp_i') / 100, step = V('gp_s') / 100, rate = V('gp_r') / 100;
+    const g = FW.goal({target: V('gp_t'), inflation: future ? 0 : inf, years: y, rate, existing: V('gp_e'), stepUp: step});
+    const lastSip = g.monthlySIP * Math.pow(1 + step, y - 1);
+    document.querySelector('label[for=gp_t]').innerHTML = `Target amount <span class="muted">(₹) · ${rupees(V('gp_t'))}</span>`;
+    out.innerHTML = tile(step > 0 ? 'Monthly SIP needed (first year)' : 'Monthly SIP needed', rupees(g.monthlySIP), true) + tile('Or lumpsum invested today', rupees(g.lumpsumToday), true);
+    const atEnd = g.futureCost, inToday = future ? V('gp_t') / Math.pow(1 + inf, y) : V('gp_t');
+    $('#gnote').innerHTML = `Target at the end: <b>${rupees(atEnd)}</b>, which is worth about ${rupees(inToday)} in today's money at ${pct(inf)} inflation.` +
+      (step > 0 ? ` The SIP rises ${pct(step, 0)} each year, to about ${rupees(lastSip)} a month in year ${y}.` : '') +
+      (V('gp_e') > 0 ? ` The ${rupees(V('gp_e'))} already saved grows to about ${rupees(g.existingFV)} and covers that much of the target.` : '') +
+      (g.gap === 0 ? ' Savings alone reach the target, so no SIP is needed.' : '') +
+      ` SIP invested at the start of each month. Tax on redemption is not deducted.`;
+    { const R = rupees, T = V('gp_t'), ex = V('gp_e'), f1 = FW.sip({monthly: 1, rate, years: y, stepUp: step}).value;
+      const lower = FW.goal({target: T, inflation: future ? 0 : inf, years: y, rate: Math.max(0, rate - 0.02), existing: ex, stepUp: step});
+      $('#cx').innerHTML = `${HOW}
+      <span><b>1. The target in future rupees.</b> ${future ? `The ${R(T)} entered is the amount wanted in ${y} years, so it is used as it is.` : `${R(T)} at today's prices will cost more in ${y} years: ${R(T)} × (1 + ${xP(inf)})<sup>${y}</sup> = <b>${R(g.futureCost)}</b>.`}</span>
+      ${ex > 0 ? `<span><b>2. What existing savings cover.</b> The ${R(ex)} already saved grows at ${xP(rate)} to ${R(g.existingFV)}, leaving <b>${R(g.gap)}</b> still to build.</span>` : `<span><b>2. The amount still to build</b> is the full <b>${R(g.gap)}</b>, as nothing has been saved yet.</span>`}
+      <span><b>3. The monthly SIP.</b> At ${xP(rate)} a year, ₹1 invested every month${step > 0 ? `, rising ${xP(step, 0)} a year,` : ''} grows to ₹${f1.toFixed(0)} in ${y} years. So the SIP needed is ${R(g.gap)} ÷ ${f1.toFixed(0)} = <b>${R(g.monthlySIP)}</b> a month${step > 0 ? ' in the first year' : ''}.</span>
+      <span><b>4. Or one lumpsum today.</b> ${R(g.gap)} ÷ (1 + ${xP(rate)})<sup>${y}</sup> = <b>${R(g.lumpsumToday)}</b> invested now would grow to the same amount.</span>
+      <span><b>What it means for an investor.</b> The plan depends on the return assumed. If returns come in 2 points lower, at ${xP(Math.max(0, rate - 0.02))}, the SIP needed rises to ${R(lower.monthlySIP)} a month${lower.monthlySIP > 0 && g.monthlySIP > 0 ? `, ${xP(lower.monthlySIP / g.monthlySIP - 1, 0)} more` : ''}. Starting earlier, stepping the SIP up with income and reviewing the plan every year matter more than picking the best fund. As the goal comes within 3 to 5 years, moving money gradually into safer funds protects it from a late market fall.</span>`; }
+  } else if (calcId === 'ret') {
+    const p = {monthlyExpense: V('r_e'), age: V('r_a'), retireAge: V('r_ra'), lifeAge: V('r_l'), inflation: V('r_i') / 100, preRate: V('r_pr') / 100, postRate: V('r_po') / 100, existing: V('r_x'), stepUp: V('r_s') / 100};
+    if (p.retireAge <= p.age || p.lifeAge <= p.retireAge) { out.innerHTML = '<p class="msg err">Retirement age must be after current age, and the plan must run past retirement.</p>'; ch.innerHTML = ''; return; }
+    const r = FW.retirement(p);
+    out.innerHTML = tile('Corpus needed at retirement', rupees(r.corpus), true) + tile('Monthly SIP needed now', rupees(r.monthlySIP), true) + tile('First month\'s expenses then', rupees(r.firstMonthlyExpense)) + tile('Savings will grow to', rupees(r.existingFV));
+    { const R = rupees, longer = FW.retirement({...p, lifeAge: p.lifeAge + 5}), hotter = FW.retirement({...p, inflation: p.inflation + 0.01}), f1 = r.yearsToRetire > 0 ? FW.sip({monthly: 1, rate: p.preRate, years: r.yearsToRetire, stepUp: p.stepUp}).value : null;
+      $('#cx').innerHTML = `${HOW}
+      <span><b>1. Expenses when you retire.</b> ${R(p.monthlyExpense)} a month today, rising ${xP(p.inflation)} a year for ${r.yearsToRetire} years, becomes ${R(p.monthlyExpense)} × (1 + ${xP(p.inflation)})<sup>${r.yearsToRetire}</sup> = <b>${R(r.firstMonthlyExpense)}</b> a month at age ${p.retireAge}.</span>
+      <span><b>2. The corpus needed.</b> From ${p.retireAge} to ${p.lifeAge}, expenses keep rising ${xP(p.inflation)} a year while the remaining money earns ${xP(p.postRate)}. <b>${R(r.corpus)}</b> is the amount that pays every month's expenses for those ${r.yearsInRetirement} years and runs to zero at ${p.lifeAge}, about ${(r.corpus / (r.firstMonthlyExpense * 12)).toFixed(0)} times the first year's expenses. The chart shows it being drawn down.</span>
+      <span><b>3. What savings cover.</b> ${p.existing > 0 ? `The ${R(p.existing)} saved so far grows at ${xP(p.preRate)} to ${R(r.existingFV)} by ${p.retireAge}, leaving ${R(r.gap)} to build.` : `Nothing is saved yet, so the full ${R(r.gap)} has to be built.`}</span>
+      <span><b>4. The monthly SIP.</b> ${f1 ? `At ${xP(p.preRate)} a year, ₹1 a month${p.stepUp > 0 ? ` rising ${xP(p.stepUp, 0)} a year` : ''} grows to ₹${f1.toFixed(0)} by retirement, so ${R(r.gap)} ÷ ${f1.toFixed(0)} = <b>${R(r.monthlySIP)}</b> a month${p.stepUp > 0 ? ' to start with' : ''}.` : 'Retirement is too close for a SIP to build the gap.'}</span>
+      <span><b>What it means for an investor.</b> Small changes in assumptions move the answer a lot. Planning to ${p.lifeAge + 5} instead of ${p.lifeAge} raises the corpus to ${R(longer.corpus)}; inflation 1 point higher raises it to ${R(hotter.corpus)}. Plan for a long life, keep the return assumptions modest, and review the plan every year or two. After retirement, the money still has to earn ${xP(p.postRate)}, so it cannot all sit in a savings account.</span>`; }
+    // corpus path through retirement
+    const sw = FW.swp({corpus: r.corpus, withdrawal: r.firstMonthlyExpense, rate: p.postRate, years: r.yearsInRetirement, increase: p.inflation});
+    lineChart(ch, [{name: 'Corpus', color: css('--s1'), points: sw.rows.filter(x => x.month % 12 === 0).map(x => ({t: p.retireAge + x.month / 12, v: x.balance}))}], {xBand: true, xFmt: d => 'Age ' + d, yFmt: v => rupees(v).replace('.00', ''), tipFmt: rupees, area: true});
+  } else if (calcId === 'swp') {
+    const yrs = Math.max(1, Math.round(V('w_y'))); const r = FW.swp({corpus: V('w_c'), withdrawal: V('w_w'), rate: V('w_r') / 100, years: yrs, increase: V('w_g') / 100});
+    const lasts = r.depletedMonth ? `Runs out in year ${Math.ceil(r.depletedMonth / 12)}` : `Lasts all ${yrs} years`;
+    out.innerHTML = `<div class="tile key"><span class="lbl">Outcome</span><b style="color:${r.depletedMonth ? 'var(--bad)' : 'var(--good)'}">${lasts}</b></div>` + tile('Left at the end', rupees(r.endBalance)) + tile('Total withdrawn', rupees(r.totalWithdrawn));
+    lineChart(ch, [{name: 'Corpus', color: css('--s1'), points: r.rows.filter(x => x.month % 12 === 0).map(x => ({t: x.month / 12, v: x.balance}))}], {xBand: true, xFmt: d => 'Year ' + d, yFmt: v => rupees(v).replace('.00', ''), tipFmt: rupees, area: true});
+    { const R = rupees, C = V('w_c'), w = V('w_w'), rt = V('w_r') / 100, g = V('w_g') / 100, wr = C > 0 ? 12 * w / C : 0, lastW = w * Math.pow(1 + g, yrs - 1);
+      // the largest starting withdrawal that still lasts every year
+      let lo = 0, hi = Math.max(C / 12, 1); for (let k = 0; k < 40; k++) { const mid = (lo + hi) / 2; if (FW.swp({corpus: C, withdrawal: mid, rate: rt, years: yrs, increase: g}).depletedMonth) hi = mid; else lo = mid; }
+      $('#cx').innerHTML = `${HOW}
+      <span><b>1. Each month.</b> ${R(w)} is withdrawn at the start of the month and the rest stays invested, earning ${xP(rt)} a year. ${g > 0 ? `The withdrawal rises ${xP(g)} every year to keep up with prices${r.depletedMonth ? `, to ${R(w * Math.pow(1 + g, Math.ceil(r.depletedMonth / 12) - 1))} a month by year ${Math.ceil(r.depletedMonth / 12)}` : `, reaching ${R(lastW)} a month in year ${yrs}`}.` : 'The withdrawal stays the same every month.'}</span>
+      <span><b>2. Withdrawal rate.</b> The first year takes out ${R(12 * w)}, or <b>${xP(wr)}</b> of the ${R(C)} corpus, against a return of ${xP(rt)}. ${wr < rt ? 'Taking out less than the fund earns lets the corpus grow at first, until the rising withdrawals overtake the returns.' : 'Taking out more than the fund earns means the corpus starts shrinking from the first year.'}</span>
+      <span><b>3. The outcome.</b> ${r.depletedMonth ? `The money runs out in year ${Math.ceil(r.depletedMonth / 12)}, after paying out ${R(r.totalWithdrawn)}.` : `The corpus lasts all ${yrs} years, pays out ${R(r.totalWithdrawn)} in total and still has ${R(r.endBalance)} left at the end.`}</span>
+      <span><b>4. The most you could withdraw.</b> With these returns${g > 0 ? ' and increases' : ''}, the largest starting withdrawal that lasts all ${yrs} years is about <b>${R(lo)}</b> a month (${xP(12 * lo / (C || 1))} of the corpus in the first year).</span>
+      <span><b>What it means for an investor.</b> Real returns do not arrive at a steady ${xP(rt)}. A market fall in the first few years of withdrawals does the most damage, because the units sold at low prices are gone and miss the recovery. Many advisers keep one to two years of withdrawals in a liquid or short-term debt fund so they never have to sell equity in a fall, and keep the starting withdrawal comfortably below the maximum above.</span>`; }
+  } else if (calcId === 'stp') {
+    const A = V('st_a'), mode = $('#st_m').value, T = Math.max(0, V('st_t')), g = V('st_g') / 100, il = mrateC(V('st_rl') / 100), ie = mrateC(V('st_re') / 100), H = Math.max(1, Math.round(V('st_y'))) * 12;
+    $('#st_amt_box').style.opacity = mode === 'profit' ? .45 : 1; $('#st_t').disabled = mode === 'profit';
+    let liq = A, eq = 0, moved = 0, amt = T, lastMonth = 0; const pts = [], lump = [], stay = [], sched = [];
+    for (let m = 0; m <= H; m++) {
+      pts.push({t: m / 12, v: liq + eq}); lump.push({t: m / 12, v: A * Math.pow(1 + ie, m)}); stay.push({t: m / 12, v: A * Math.pow(1 + il, m)});
+      if (m === H) break;
+      liq *= 1 + il; eq *= 1 + ie;
+      let x = 0;
+      if (mode === 'profit') x = Math.max(0, liq - A);
+      else { if (mode === 'inc' && m > 0 && m % 12 === 0) amt *= 1 + g; x = Math.min(liq, amt); }
+      liq -= x; eq += x; moved += x;
+      if (x > 0.5) { lastMonth = m + 1; sched.push({m: m + 1, x, liq, eq}); }
+    }
+    const end = liq + eq;
+    const done = mode !== 'profit' && liq < 1 ? `Liquid fund empty after ${lastMonth} transfer${lastMonth === 1 ? '' : 's'}` : null;
+    out.innerHTML = tile(`Value after ${H / 12} years`, rupees(end), true) +
+      (mode === 'profit' ? tile('Average monthly transfer', rupees(sched.length ? moved / sched.length : 0)) : tile('First monthly transfer', rupees(Math.min(T, A))) ) +
+      tile('Moved into equity', rupees(moved)) + tile(done ? 'Transfers' : 'Still in the liquid fund', done ? `${lastMonth} months` : rupees(liq)) +
+      tile('All in equity on day one', rupees(lump[lump.length - 1].v)) + tile('All left in the liquid fund', rupees(stay[stay.length - 1].v));
+    $('#stt').innerHTML = `<thead><tr><th>Month</th><th>Transferred</th><th>Left in liquid fund</th><th>Equity fund value</th></tr></thead><tbody>` +
+      sched.slice(0, 120).map(r => `<tr><td>${r.m}</td><td>${rupees(r.x)}</td><td>${rupees(r.liq)}</td><td>${rupees(r.eq)}</td></tr>`).join('') +
+      (sched.length > 120 ? `<tr><td colspan="4" class="muted">…and ${sched.length - 120} more months</td></tr>` : '') + '</tbody>';
+    { const R = rupees, L1 = lump[lump.length - 1].v, S1 = stay[stay.length - 1].v, Y = H / 12;
+      $('#cx').innerHTML = `${HOW}
+      <span><b>1. Each month.</b> The money waiting in the liquid fund earns ${xP(V('st_rl') / 100)} a year (${xP(il, 2)} a month). ${mode === 'profit' ? `Then only that month's gain is moved to the equity fund, so the original ${R(A)} stays in the liquid fund throughout.` : `Then ${R(T)}${mode === 'inc' ? `, rising ${xP(g, 0)} every 12 months,` : ''} is moved to the equity fund, which earns ${xP(V('st_re') / 100)} a year.`}</span>
+      <span><b>2. How long it runs.</b> ${mode === 'profit' ? `The gains moved average ${R(sched.length ? moved / sched.length : 0)} a month, ${R(moved)} in all over ${Y} years.` : done ? `${R(T)} a month empties the ${R(A)} in ${lastMonth} transfers. It takes slightly more than ${R(A)} ÷ ${R(T)} because the money still waiting keeps earning interest; the last transfer is whatever is left.` : `At ${R(T)} a month, ${R(liq)} is still in the liquid fund after ${Y} years.`}</span>
+      <span><b>3. Value after ${Y} years.</b> With the STP the total is <b>${R(end)}</b>. Investing all ${R(A)} in equity on day one would give ${R(L1)}, and leaving it all in the liquid fund ${R(S1)}. ${end < L1 ? `The difference, ${R(L1 - end)}, is the cost of waiting: money sits in the lower-return liquid fund while the transfers run.` : ''}</span>
+      <span><b>What it means for an investor.</b> With steady assumed returns, investing everything on day one always comes out ahead when equity earns more than liquid. An STP is not about higher returns: it is protection against putting a large sum in just before a fall, and it makes a big investment easier to stick with. Most STPs run 6 to 12 months; much longer and the cost of waiting grows. ${mode === 'profit' ? 'The profit-only STP keeps the capital safe and invests just the income, which suits cautious investors.' : ''} Each transfer is a redemption from the liquid fund, taxed at the investor's slab rate on its small gain.</span>`; }
+    lineChart(ch, [{name: 'With the STP', color: css('--s1'), points: pts}, {name: 'All in equity on day one', color: css('--s2'), points: lump}, {name: 'All left in liquid', color: css('--muted'), points: stay}],
+      {xBand: true, xFmt: d => 'Year ' + d, yFmt: v => rupees(v).replace('.00', ''), tipFmt: rupees});
+  }
+}
+let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(compute, 150); });
+renderCalc();
+})();
+</script>
+</body>
+</html>
